@@ -34,10 +34,10 @@ TRAIN:
       '../dataset/lmdb/str/TextZoom/test/medium',
     ]
     n_vis: 10
-    vis_dir: 'demo'
+    vis_dir: '/content/drive/MyDrive/OCTA/license_plate/models/TextZoom'
     valInterval: 200 #-1, val at the end of epoch
-    rec_pretrained: 'demo.pth.tar'
-    moran_pretrained: 'moran.pth'
+    rec_pretrained: 'Aster demo.pth'
+    moran_pretrained: 'Moran demo.pth'
     crnn_pretrained: 'crnn.pth'
 
 TEST:
