@@ -38,7 +38,7 @@ if __name__ == '__main__':
     parser.add_argument('--demo', action='store_true', default=False)
     parser.add_argument('--demo_dir', type=str, default='./demo')
     args = parser.parse_args()
-    config_path = os.path.join('config', 'super_resolution.yaml')
+    config_path = os.path.join('/content/TextZoom/src/config', 'super_resolution.yaml')
     config = yaml.load(open(config_path, 'r'), Loader=yaml.Loader)
     config = EasyDict(config)
     main(config, args)
