@@ -3,8 +3,8 @@ MODEL:
 
 TRAIN:
   train_data_dir: [
-    '../dataset/lmdb/str/TextZoom/train1',
-    '../dataset/lmdb/str/TextZoom/train2',
+    '/content/drive/MyDrive/OCTA/license_plate/models/TextZoomGit/TextZoom/train1',
+    '/content/drive/MyDrive/OCTA/license_plate/models/TextZoomGit/TextZoom/train2',
   ]
   batch_size: 512
   width: 128
@@ -29,9 +29,9 @@ TRAIN:
 
   VAL:
     val_data_dir: [
-      '../dataset/lmdb/str/TextZoom/test/hard',
-      '../dataset/lmdb/str/TextZoom/test/easy',
-      '../dataset/lmdb/str/TextZoom/test/medium',
+      '/content/drive/MyDrive/OCTA/license_plate/models/TextZoomGit/TextZoom/test/hard',
+      '/content/drive/MyDrive/OCTA/license_plate/models/TextZoomGit/TextZoom/test/easy',
+      '/content/drive/MyDrive/OCTA/license_plate/models/TextZoomGit/TextZoom/test/medium',
     ]
     n_vis: 10
     vis_dir: '/content/drive/MyDrive/OCTA/license_plate/models/TextZoom'
