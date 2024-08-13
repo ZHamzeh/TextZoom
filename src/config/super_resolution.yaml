@@ -36,8 +36,8 @@ TRAIN:
     n_vis: 10
     vis_dir: '/content/drive/MyDrive/OCTA/license_plate/models/TextZoomGit'
     valInterval: 200 #-1, val at the end of epoch
-    rec_pretrained: 'Aster demo.pth'
-    moran_pretrained: 'Moran demo.pth'
+    rec_pretrained: 'Aster-demo.pth'
+    moran_pretrained: 'Moran-demo.pth'
     crnn_pretrained: 'crnn.pth'
 
 TEST:
