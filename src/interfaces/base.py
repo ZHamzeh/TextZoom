@@ -152,7 +152,7 @@ class TextBase(object):
             if cfg.ngpu >= 1:
                 model = torch.nn.DataParallel(model, device_ids=range(cfg.ngpu))
                 image_crit = torch.nn.DataParallel(image_crit, device_ids=range(cfg.ngpu))
-            if self.resume is not '':
+            if self.resume != '':
                 print('loading pre-trained model from %s ' % self.resume)
                 if self.config.TRAIN.ngpu == 1:
                     model.load_state_dict(torch.load(self.resume)['state_dict_G'])
@@ -191,7 +191,7 @@ class TextBase(object):
                 os.mkdir(out_path)
             im_name = pred_str_lr[i] + '_' + pred_str_sr[i] + '_' + label_strs[i] + '_.png'
             im_name = im_name.replace('/', '')
-            if index is not 0:
+            if index != 0:
                 torchvision.utils.save_image(vis_im, os.path.join(out_path, im_name), padding=0)
 
     def test_display(self, image_in, image_out, image_target, pred_str_lr, pred_str_sr, label_strs, str_filt):
