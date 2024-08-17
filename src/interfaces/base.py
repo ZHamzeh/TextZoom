@@ -155,10 +155,10 @@ class TextBase(object):
             if self.resume != '':
                 print('loading pre-trained model from %s ' % self.resume)
                 if self.config.TRAIN.ngpu == 1:
-                    model.load_state_dict(torch.load(self.resume)['state_dict_G'])
+                    model.load_state_dict(torch.load(self.resume)['state_dict'])
                 else:
                     model.load_state_dict(
-                        {'module.' + k: v for k, v in torch.load(self.resume)['state_dict_G'].items()})
+                        {'module.' + k: v for k, v in torch.load(self.resume)['state_dict'].items()})
         return {'model': model, 'crit': image_crit}
 
     def optimizer_init(self, model):
@@ -228,7 +228,7 @@ class TextBase(object):
         if not os.path.exists(ckpt_path):
             os.mkdir(ckpt_path)
         save_dict = {
-            'state_dict_G': netG.module.state_dict(),
+            'state_dict': netG.module.state_dict(),
             'info': {'arch': self.args.arch, 'iters': iters, 'epochs': epoch, 'batch_size': self.batch_size,
                      'voc_type': self.voc_type, 'up_scale_factor': self.scale_factor},
             'best_history_res': best_acc_dict,
